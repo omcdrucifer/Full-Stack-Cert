@@ -1,8 +1,7 @@
--- FULL STACK DEV COURSE --
-Now that I've completed the CS course for Codecademy, I am starting a full stack course.
-Much like the previous course, there will be portfolio projects throughout the course.
+# Full Stack Dev Course
 
-Previously, I made repos for each project, but I realize that can create a lot of bloat
-and the best practice would be to dedicate one repo to the entirety of the course and its projects.
+Now that I've completed the CS course for Codecademy, I am excited to start a full stack development course. This course will include various portfolio projects throughout its duration.
 
-I haven't reached the first project yet, I am just setting up the repo.
+Previously, I created separate repos for each project. However, I realized that this approach could lead to unnecessary clutter. As a best practice, I have now dedicated a single repository to host the entire course and all of its projects.
+
+*Note: I haven't reached the first project yet—this repository is currently being set up.*
