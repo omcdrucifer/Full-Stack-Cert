@@ -17,3 +17,14 @@ review the notes and examples I have taken from my coursework to date and decide
 generator, or some kind of random quote generator. I need to nail that down still. 
 
 I am going to go ahead and make the repo public since I am now at the first portfolio project.
+
+### Parameters
+
+As previously mentioned, the basic concept is a random message generator. The concept is obviously very broad, so we
+will put a pin in that for now. The messages are supposed to be fragmented in at least three parts, this seems to suggest
+an almost Mad Libs type of approach. Being that the assignment is meant to demonstrate basic JS concepts and syntax, the
+data structure will most likely be an array of some type and the program will execute in a terminal.
+
+I need to decide how to approach user interaction. If I made it execute automatically without user input that would be
+kind of boring so I want there to be some level of interactivity, what that looks like I have yet to decide. A lot of
+this is going to depend on what form this generator takes.
