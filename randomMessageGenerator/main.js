@@ -10,48 +10,54 @@
 import readline from 'readline'; // I will use readline to get user input
 // I will use the factory function to generate messages
 const messageFactory = () => {
-    const messages1 = ['foo', 'bar', 'baz', 'qux'];
-    const messages2 = ['hello', 'world', 'foo', 'bar'];
-    const messages3 = ['fi', 'fye', 'fo', 'fum']; // these will eventually be populated with data
+    const part1 = ['foo', 'bar', 'baz', 'qux'];
+    const part2 = ['hello', 'world', 'foo', 'bar'];
+    const part3 = ['fi', 'fye', 'fo', 'fum']; // these will eventually be populated with data
 
     const getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
-    return `${getRandomElement(messages1)} ${getRandomElement(messages2)} ${getRandomElement(messages3)}`;
+    return `${getRandomElement(part1)} ${getRandomElement(part2)} ${getRandomElement(part3)}`;
 };
 // placeholder input function. this is just to get the logic in place.
-const userInput = input => {
-    if (input.toLowerCase() === 'generate') {
+const userInput = (input, rl) => {
+    if (input === 'generate') {
+        // Generate and display a random message
+        console.log(''); // Add a blank line for readability
         const message = messageFactory();
         console.log(message);
+        console.log(''); // Add a blank line for readability
+        // Continue prompting the user
+        promptUser(rl);
+    } else if (input === 'exit') {
+        // Display goodbye message and close the readline interface
+        console.log(''); // Add a blank line for readability
+        console.log('Goodbye!');
+        rl.close();
     } else {
-        console.log('Invalid input. Please type "generate" to generate a message.');
+        // Inform the user of invalid input
+        console.log('Invalid input. Please type "generate" to generate a message or "exit" to exit the program.');
+        // Continue prompting the user
+        promptUser(rl);
     }
 };
-// create readline interface
+
+// Function to prompt the user for input
+const promptUser = (rl) => {
+    // Prompt the user with a question
+    rl.question('Type "generate" to generate a message or "exit" to exit the program: ', (input) => {
+        // Convert input to lowercase
+        input = input.toLowerCase();
+
+        // Process the user input
+        userInput(input, rl);
+    });
+};
+
+// Create readline interface
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-// prompt user for input
-const promptUser = () => {
-    rl.question('Type "generate" to generate a message: ', input => {
-        userInput(input);
-        rl.close();
-    });
-};
-// create an exit function just a concept, not fully implemented
-// in its current state, the program exits after one input
-const promptExit = () => {
-    rl.question('Type "exit" to exit the program: ', input => {
-        if (input.toLowerCase() === 'exit') {
-            console.log('Goodbye!');
-            rl.close();
-        }
-        else {
-            console.log('Invalid input. Please type "exit" to exit the program.');
-            promptExit();
-        }
-    });
-};
-// start the program
-promptUser();
+
+// Start the program by calling promptUser
+promptUser(rl);
