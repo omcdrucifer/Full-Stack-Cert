@@ -28,3 +28,10 @@ data structure will most likely be an array of some type and the program will ex
 I need to decide how to approach user interaction. If I made it execute automatically without user input that would be
 kind of boring so I want there to be some level of interactivity, what that looks like I have yet to decide. A lot of
 this is going to depend on what form this generator takes.
+
+### POC
+
+I have put together a basic POC for the project. I built a generic factory function with some prompt code to get user
+input. All the code written is basic but works. It is all placeholder code for now and as such is subject to change.
+It's just a couple of basic functions, but we are still in the planning stages and this is mostly to help me get some
+basic structure in place.
