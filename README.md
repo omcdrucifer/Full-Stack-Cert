@@ -41,3 +41,10 @@ the code to fit the newly defined theme. The existing code will do the job but i
 The code functions and everything has been renamed to properly fit the theme. I am still working to dress it up and make
 it look good. Right now it just prints a couple of statements and a single fortune. I am trying to come up with some
 decorative elements to add to the output.
+
+### Conclusion
+
+In its current state the random generator meets the requirements laid out in the assignment. I may add to it later.
+I have also decided that as this repository evolves and the filesystem grows, I will migrate project specific README to
+a project folder and let this main README serve as an overview of the course and what the constraints were for each
+project. I'm getting more comfortable with markdown so I may even link to the project READMEs from this one.

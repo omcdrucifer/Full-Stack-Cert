@@ -77,7 +77,6 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-// Display ASCII art
 console.log(asciiArt.crystalBall);
 // Start the program by calling promptUser
 promptUser(rl);
