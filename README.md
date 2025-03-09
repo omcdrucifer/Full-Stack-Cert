@@ -35,3 +35,9 @@ I have put together a basic POC for the project. I built a generic factory funct
 input. All the code written is basic but works. It is all placeholder code for now and as such is subject to change.
 It's just a couple of basic functions, but we are still in the planning stages and this is mostly to help me get some
 basic structure in place.
+
+To get myself started and out of any choice paralysis, I decided to make a fortune teller generator. Next is to refine
+the code to fit the newly defined theme. The existing code will do the job but is generic and the arrays are gibberish.
+The code functions and everything has been renamed to properly fit the theme. I am still working to dress it up and make
+it look good. Right now it just prints a couple of statements and a single fortune. I am trying to come up with some
+decorative elements to add to the output.

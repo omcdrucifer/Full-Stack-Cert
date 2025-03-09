@@ -1,28 +1,20 @@
-// I still need to figure out what context I want to use this in
-// Maybe a chat bot or a fortune cookie generator or some kind of 
-// quote generator or inspirational message generator, etc
-// as we can see, the possibilities are vast
-// I also need to consider interactivity. How will the user interact with the program
-// It will be a terminal program, because we are working with basic concepts
-// This makes me want to lean toward a prompt
-// It also could just run from initialization without user input, but that seems less fun
 import readline from 'readline';
-
-const messageFactory = () => {
-    const part1 = ['foo', 'bar', 'baz', 'qux'];
-    const part2 = ['hello', 'world', 'foo', 'bar'];
-    const part3 = ['fi', 'fye', 'fo', 'fum']; // these will eventually be populated with data
+// random message generator. fortuneTeller function
+const fortuneTeller = () => {
+    const beginning = ['My sources', 'The signs', 'Not', 'I have a feeling', 'I predict', 'I foresee', 'I sense'];
+    const middle = ['point to', 'say', 'likely', 'bare', 'indicate', 'suggest', 'hint at'];
+    const end = ['yes', 'no', 'unknown'];
 
     const getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
-    return `${getRandomElement(part1)} ${getRandomElement(part2)} ${getRandomElement(part3)}`;
+    return `${getRandomElement(beginning)} ${getRandomElement(middle)} ${getRandomElement(end)}`;
 };
-// placeholder input function. this is just to get the logic in place.
+// Function to handle user input
 const userInput = (input, rl) => {
-    if (input === 'generate') {
+    if (input === 'fortune') {
         // Generate and display a random message
         console.log(''); // Add a blank line for readability
-        const message = messageFactory();
+        const message = fortuneTeller();
         console.log(message);
         console.log('');
         // Continue prompting the user
@@ -35,7 +27,7 @@ const userInput = (input, rl) => {
     } else {
         // Inform the user of invalid input
         console.log('');
-        console.log('Invalid input. Please type "generate" to generate a message or "exit" to exit the program.');
+        console.log('Invalid input. Please type "fortune" to hear your fate or "exit" to exit the program.');
         console.log(''); 
         promptUser(rl);
     }
@@ -43,7 +35,7 @@ const userInput = (input, rl) => {
 // Function to prompt the user for input
 const promptUser = (rl) => {
     // Prompt the user with a question
-    rl.question('Type "generate" to generate a message or "exit" to exit the program: ', (input) => {
+    rl.question('Welcome to the drunk fortune teller! Type "fortune" to hear your fate or "exit" to exit the program: ', (input) => {
         // Convert input to lowercase
         input = input.toLowerCase();
         // Process the user input
