@@ -1,6 +1,17 @@
 import readline from 'readline';
+const asciiArt = {
+  crystalBall: `
+        .::::.
+     ::::hear:::.  
+    :::::::::::::::
+    :::::your::::::
+     '::::::::::::'
+       ':fate:::'
+         '::::'
+    `
+};
 // random message generator. fortuneTeller function
-const fortuneTeller = () => {
+const createFortuneTeller = () => {
     const beginning = [
         "In the near future,",
         "Soon,",
@@ -22,16 +33,20 @@ const fortuneTeller = () => {
 
     const getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
-    return `${getRandomElement(beginning)} ${getRandomElement(middle)} ${getRandomElement(end)}`;
+    return {
+        getFortune: () => {
+            console.log('');
+            console.log(`${getRandomElement(beginning)} ${getRandomElement(middle)} ${getRandomElement(end)}`);
+            console.log('');
+        }
+    };
 };
+const fortuneTeller = createFortuneTeller();
 // Function to handle user input
 const userInput = (input, rl) => {
     if (input === 'fortune') {
         // Generate and display a random message
-        console.log(''); // Add a blank line for readability
-        const message = fortuneTeller();
-        console.log(message);
-        console.log('');
+        fortuneTeller.getFortune();
         // Continue prompting the user
         promptUser(rl);
     } else if (input === 'exit') {
@@ -42,7 +57,7 @@ const userInput = (input, rl) => {
     } else {
         // Inform the user of invalid input
         console.log('');
-        console.log('Invalid input. Please type "fortune" to hear your fate or "exit" to exit the program.');
+        console.log('Invalid input. Please try again.');
         console.log(''); 
         promptUser(rl);
     }
@@ -62,5 +77,7 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+// Display ASCII art
+console.log(asciiArt.crystalBall);
 // Start the program by calling promptUser
 promptUser(rl);
