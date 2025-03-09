@@ -1,9 +1,24 @@
 import readline from 'readline';
 // random message generator. fortuneTeller function
 const fortuneTeller = () => {
-    const beginning = ['My sources', 'The signs', 'Not', 'I have a feeling', 'I predict', 'I foresee', 'I sense'];
-    const middle = ['point to', 'say', 'likely', 'bare', 'indicate', 'suggest', 'hint at'];
-    const end = ['yes', 'no', 'unknown'];
+    const beginning = [
+        "In the near future,",
+        "Soon,",
+        "Very shortly,",
+        "In the coming days,",
+        "Before the next full moon,"];
+    const middle = [
+        "you will find great fortune",
+        "a surprise will come your way",
+        "an old friend will reach out",
+        "you will discover a hidden talent",
+        "an exciting opportunity will present itself"];
+    const end = [
+        "that will change your life.",
+        "and bring you much happiness.",
+        "that will lead to success.",
+        "and fill you with joy.",
+        "that will broaden your horizons."];
 
     const getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
@@ -35,7 +50,7 @@ const userInput = (input, rl) => {
 // Function to prompt the user for input
 const promptUser = (rl) => {
     // Prompt the user with a question
-    rl.question('Welcome to the drunk fortune teller! Type "fortune" to hear your fate or "exit" to exit the program: ', (input) => {
+    rl.question('Type "fortune" to hear your fate or "exit" to exit the program: ', (input) => {
         // Convert input to lowercase
         input = input.toLowerCase();
         // Process the user input
