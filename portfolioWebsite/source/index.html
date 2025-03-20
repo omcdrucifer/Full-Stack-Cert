@@ -38,6 +38,20 @@
                     calculate dividend payments for interest bearing deposit accounts like CDs and Money Markets. Also
                     made a GUI wrapper for it with the Tkinter library.</p>
                 </div>
+                <button onclick="toggleDetails('project1')">Show Details</button>
+                <div id="project1" class="details">
+                    <p>The project uses class objects in Python and uses class inheritance via a parent/child class
+                    relationship. The parent class acts as a sort of traffic director and controls the flow of the rest
+                    of the program based on user inputs. It prompts the user to pick a loan or savings project, then
+                    summons the next appropriate class object based on the user's choice. It asks for the user to input
+                    the interest rate when calculating loans and uses JSON objects to store tiered dividend rates for
+                    money market accounts where the dividend rate is determined by the average daily balance of the
+                    account.</p>
+                    <br>
+                    <p>The terminal version of the app uses some simple ASCII art to make the program more visually
+                    appealing. The GUI wrapper was made with the customtkinter library, which is a modified version of
+                    the tkinter library and offers a more modern look and feel.</p>
+                </div>
                 <div class="project">
                     <h3>Terminal RPG Game</h3>
                     <p>This one is still in progress but has a significant amount of logic already in place. It is an
@@ -47,10 +61,32 @@
                     Currently written in Python but may consider rewriting later down the road to make it playable on
                     the web.</p>
                 </div>
+                <button onclick="toggleDetails('project2')">Show Details</button>
+                <div id="project2" class="details">
+                    <p>This one is a self driven project and I assigned it to myself to give myself a more significant
+                    challenge than just writing something that can be done with a couple hundred lines of code, as was
+                    often the case with portfolio projects I was assigned. So I set out to design a game because that is
+                    definitely a project that requires many many lines of code, even in a simplified form like what I am
+                    currently working on.</p>
+                    <br>
+                    <p>In addition to the features I mentioned above, there is menu management (albeit plain text to fit
+                    the theme) and a save management system. The save files are JSON objects that capture the important
+                    details like player character attributes, location within the game, etc. At this point I want to get
+                    the story written before I work on any more features. Up to this point I have been testing the story
+                    tree with fragmented generic story elements just to make sure the logic works.</p>
+                </div>
                 <div class="project">
                     <h3>Portfolio Website</h3>
                     <p>This website is itself a portfolio project. Mostly built with CSS and HTML, with a splash of
                     JavaScript.</p>
+                </div>
+                <button onclick="toggleDetails('project3')">Show Details</button>
+                <div id="project3" class="details">
+                    <p>I'm putting this site together as a portfolio project for the Full Stack Developer course on
+                    Codecademy. While I do have some prior experience with HTML &amp; CSS from college design courses, I
+                    took the easy route for a long time and used WYSIWYG software like Adobe Muse. So I need to not only
+                    knock the dust off but catch up on a decade of changes between them both. That was the early days of
+                    HTML5.</p>
                 </div>
                 <div class="project">
                     <h3>Board level repair of an Original Xbox</h3>
@@ -61,6 +97,7 @@
                     likely bad/dead and needs to be replaced as that chip controls overheat signals and was near the
                     previously mentioned corrosion.</p>
                 </div>
+                <button onclick="toggleDetails('project4')">Show Details</button>
             </section>
         </main>
         <footer>
