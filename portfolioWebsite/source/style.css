@@ -2,33 +2,114 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-header {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #f0f0f0;
+    flex-direction: column;
 }
-header h1 {
-    margin: 0;
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #f0f0f0
 }
+
 header img {
-    height: 100px;
+    width: 150px;
     border-radius: 50%;
 }
+
 main {
-    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
+
 section {
     margin-bottom: 40px;
 }
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f0f0f0;
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
+
+.project-left .project-text {
+    order: 1;
+    flex: 1;
+}
+
+.project-left img {
+    order: 2;
+    flex: 1;
+    max-width: 50%;
+}
+
+.project-right .project-text {
+    order: 2;
+    flex: 1;
+}
+
+.project-right img {
+    order: 1;
+    flex: 1;
+    max-width: 50%;
+}
+
+.project-text, .project img {
+    padding: 10px;
+}
+
+.project-text h3 {
+    margin: 0 0 10px 0;
+}
+
+.project-text p {
+    margin: 0 0 20px 0;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .details {
     display: none;
+    margin-top: 20px;
+}
+
+.details p {
+    margin: 0 0 20px 0;
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-left .project-text, .project-left img,
+    .project-right .project-text, .project-right img {
+        order: initial;
+    }
+}
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        margin: 0 auto 20px;
+    }
+
+    .project-left,
+    .project-right {
+        flex-direction: column;
+        text-align: center;
+    }
 }
