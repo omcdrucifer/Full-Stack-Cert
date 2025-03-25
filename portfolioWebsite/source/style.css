@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
 }
 
-header {
+header, footer {
     display: flex;
     align-items: center;
     justify-content: center;
