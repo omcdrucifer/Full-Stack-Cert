@@ -105,6 +105,7 @@ button:hover {
     padding: 15px;
     border-radius: 5px;
     margin-top: 10px;
+<<<<<<< HEAD
 }
 
 .contact-container {
@@ -154,6 +155,60 @@ button:hover {
 
 .social-links a:hover {
     color: #2980b9;
+=======
+}
+
+#contact section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+#contactForm {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f9f9fc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#contactForm textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contactForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #2980b9;
+>>>>>>> c61b5040c91e3f6d8c9086ddcf352d3163c5cd73
 }
 
 @media (max-width: 768px) {
@@ -186,6 +241,7 @@ button:hover {
         height: 250px;
     }
 
+<<<<<<< HEAD
     .contact-container {
         flex-direction: column;
         align-items: center;
@@ -195,5 +251,11 @@ button:hover {
         width: 90%;
         max-width: 500px;
         margin-bottom: 20px;
+=======
+    #contactForm {
+        width: 90%;
+        margin: 0 auto;
+>>>>>>> c61b5040c91e3f6d8c9086ddcf352d3163c5cd73
     }
 }
+
