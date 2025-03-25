@@ -165,36 +165,52 @@ button:hover {
     min-height: 70vh;
 }
 
-#contactForm {
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
     width: 100%;
-    max-width: 500px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 0 0 300px;
     background-color: #f9f9fc;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#contactForm label {
-    display: block;
-    margin-bottom: 5px;
+.contact-info h2 {
     color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-#contactForm input,
-#contactForm textarea {
-    width: 100%;
-    padding: 10px;
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links h3 {
+    color: #2980b9;
     margin-bottom: 15px;
-    border: 1px solid #bdc3c7;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
 
-#contactForm textarea {
-    height: 150px;
-    resize: vertical;
+.social-links a {
+    display: block;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
+<<<<<<< Updated upstream
 #contactForm button {
     width: 100%;
     padding: 12px;
@@ -209,6 +225,10 @@ button:hover {
 #contactForm button:hover {
     background-color: #2980b9;
 >>>>>>> c61b5040c91e3f6d8c9086ddcf352d3163c5cd73
+=======
+.social-links a:hover {
+    color: #2980b9;
+>>>>>>> Stashed changes
 }
 
 @media (max-width: 768px) {
@@ -241,12 +261,16 @@ button:hover {
         height: 250px;
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     .contact-container {
         flex-direction: column;
         align-items: center;
     }
 
+<<<<<<< Updated upstream
     .contact-info {
         width: 90%;
         max-width: 500px;
@@ -256,6 +280,13 @@ button:hover {
         width: 90%;
         margin: 0 auto;
 >>>>>>> c61b5040c91e3f6d8c9086ddcf352d3163c5cd73
+=======
+    .contact-info, 
+    #contactForm {
+        width: 90%;
+        max-width: 500px;
+        margin-bottom: 20px;
+>>>>>>> Stashed changes
     }
 }
 
